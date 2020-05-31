@@ -18,7 +18,7 @@ public class ItemServiceFeing implements ItemService {
 
     @Override
     public List<Item> findAll() {
-        return clienteFeing.listar().stream().map(p -> new Item(p,1)).collect(Collectors.toList());
+        return clienteFeing.listar().stream().map(p -> new Item(p, 1)).collect(Collectors.toList());
     }
 
     @Override

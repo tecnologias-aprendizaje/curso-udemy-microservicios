@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+
 import static java.util.stream.Collectors.toList;
 
 @RestController
@@ -25,7 +26,7 @@ public class ProductoController {
     private Integer port;
 
     @GetMapping("/listar")
-    public List<Producto> listar(){
+    public List<Producto> listar() {
         return productoService.findAll().stream().map(producto -> {
             producto.setPort(port);
             return producto;
@@ -33,7 +34,7 @@ public class ProductoController {
     }
 
     @GetMapping("/ver/{id}")
-    public Producto detalle(@PathVariable("id")  Long id){
+    public Producto detalle(@PathVariable("id") Long id) {
         Producto producto = productoService.findById(id);
         producto.setPort(Integer.valueOf(environment.getProperty("local.server.port")));
         return producto;

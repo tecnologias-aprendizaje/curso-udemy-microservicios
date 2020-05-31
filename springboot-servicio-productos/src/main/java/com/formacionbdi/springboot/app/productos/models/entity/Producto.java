@@ -32,5 +32,5 @@ public class Producto implements Serializable {
 
     @Getter(AccessLevel.NONE)
     @Setter(AccessLevel.NONE)
-    private static final long serialVersionUID=12343434343L;
+    private static final long serialVersionUID = 12343434343L;
 }

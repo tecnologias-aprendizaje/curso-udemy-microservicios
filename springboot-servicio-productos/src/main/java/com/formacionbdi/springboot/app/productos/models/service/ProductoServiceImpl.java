@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class ProductoServiceImpl implements  IProductoService{
+public class ProductoServiceImpl implements IProductoService {
 
     @Autowired
     private ProductoDao repository;
@@ -24,6 +24,6 @@ public class ProductoServiceImpl implements  IProductoService{
     @Override
     @Transactional(readOnly = true)
     public Producto findById(Long id) {
-        return  repository.findById(id).orElse(null);
+        return repository.findById(id).orElse(null);
     }
 }
