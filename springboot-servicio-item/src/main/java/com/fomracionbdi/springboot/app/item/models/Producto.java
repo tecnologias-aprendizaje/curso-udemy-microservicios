@@ -11,5 +11,6 @@ public class Producto {
     private Long id;
     private String nombre;
     private Double precio;
+    private Integer port;
     private Date CreateAt;
 }
