@@ -14,6 +14,10 @@ public class Item {
         this.cantidad = cant;
     }
 
+    public Item() {
+
+    }
+
     public Double getTotal() {
         return producto.getPrecio() * cantidad;
     }
